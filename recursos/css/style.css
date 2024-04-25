@@ -1,0 +1,237 @@
+/* Captura de Tela 2023-05-16 às 21.19 1 */
+@import url("https://fonts.googleapis.com/css2?family=Zeyada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+:root{
+    --color-primary:gold;
+    --color-second:orangered;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 744px;
+    height: 1133px;
+    width: 100%;    
+    background-color:white;
+}
+
+header {
+    /*background-color:#f9f6ef; #5a5959;*/
+    width: 744px;
+    align-items: center;
+    font-family: "Zeyada", sans-serif;
+    font-optical-sizing: auto;
+    place-items: center;
+    background-image: linear-gradient(#111, #444);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin-top: 68px ;
+}
+
+input {
+    width: 400px;
+    height: 42px;
+    border: 1px solid;
+    border-color:#CCCCCC;
+    padding: 4px 3px 4px 12px;
+    gap:8px;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+    gap: 8px;
+}
+
+.error{
+    display: none;
+    color:red;
+}
+
+select{
+    width: 420px;
+    height: 42px;
+    border: 1px solid;
+    border-color:#CCCCCC;
+    padding: 4px 3px 4px 12px;
+    gap:8px;
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+label{
+    text-align: left;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+@keyframes changeColor {
+    0% { color: red; }
+    10% { color:rgb(198, 101, 101)}
+    20% { color:rgb(0, 47, 255)}
+    30% { color: rgb(61, 61, 138); }
+    40% { color: green; }
+    50% { color: rgb(128, 195, 127); }
+    60% { color: purple; }
+    70% { color: rgb(188, 120, 188);}
+    80% { color: rgb(91, 211, 197);}
+    90% { color: rgb(0, 119, 128);}
+    100%{ color:orangered;}
+}
+
+.titulo{
+    animation: changeColor 10s infinite;
+    /*text-transform:uppercase;*/
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    max-width: auto;
+    height: 100%;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.logomarca{
+    margin-top: 25px;
+    
+    text-align: left;
+}
+.lbtexto{
+    margin-top: 7px;
+}
+
+.lbtexto{
+    margin-top: 16px;
+}
+
+.btncalcular{
+    margin-top: 160px;
+    border: 1px;
+    cursor: pointer;
+    transition: background .1s;
+    background-color: #284A5E;
+    color: #FFFFFF;
+    border-radius: 8px;
+    width: 400px;
+    height: 42px;
+}
+
+.btncalcular:hover{
+    background-color: #173140;
+}
+
+.modal{
+    display: none;   
+    position: absolute;
+    background-color:rgb(0,0,0, .5) ;
+    width: 744px;
+    height:1133px;
+    margin-top: 15px;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    border: none;
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 465px;
+    height: 196px;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;    
+    background-color: #fff;
+    padding: 1px;
+    box-shadow: 0 0 2px #ffffff;
+}
+
+.modal-header, .modal-body, .modal-footer{
+    padding: 1px;
+}
+
+.modal-header{
+    height: 40px;
+}
+
+.modal-body{
+    height: 70px;
+}
+
+.modal-footer{
+
+}
+
+.btnsim , .btnnao{
+    width: 180.5px;
+    height: 44px;
+    border-radius: 10px;
+    gap: 10px;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: pointer;
+}
+
+.btnsim{
+    display: inline;
+    transition: background .2s;
+    background-color: #284A5E; 
+    border: 1px solid #284A5E;
+    color: #ffffff;
+    margin-right: 18px;
+}
+
+.btnsim:hover{
+    background-color: #497690;
+}
+
+.btnnao{
+    display: inline;
+    transition: background .2s;
+    background-color: #FFFFFF; 
+    border: 1px solid #4F4F4F;
+}
+
+.btnnao:hover{
+    background-color: #9c9b9b; 
+}
+
+.concluir{
+    display: none;
+    cursor: pointer;
+    transition: background .1s;
+    background-color: #284A5E;
+    color: #FFFFFF;
+    border-radius: 8px;
+    border: #284A5E solid;
+    width: 400px;
+    height: 42px;
+
+}
+
+.close-modal{
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-left: 431px;
+    width: 24px;
+    height: 24px;
+    border-radius: 29px;
+    background-color: #E5E5E5;
+    align-items: center;
+    text-align: center;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 25px;
+    color: #5a5959;
+    cursor: pointer;
+}
+
+
+.close:hover{
+    background-color: #a7a7a7;
+}

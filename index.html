@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <link rel="stylesheet" href="./recursos/css/style.css">
+</head>
+<body>
+    <main class="container">
+        <header >
+            <h1 id="header" data-val="Learning Axis" class="titulo">Pizzaria Patroni a melhor da região!</h1>
+        </header>
+
+        <section class="logomarca">
+            <img src="./recursos/image/logo_pizza.png" alt="Logo marca da empresa">
+        </section>    
+        
+        <section class="form">
+            <label class="lbtexto">Valor total da conta:  <span class="error" id="error-msg" style="display: none;"> Digite somente número.</span>  </label>
+            <input class="txtvalor" type="text" id="txtvalor" name="txtvalor" onchange="onValorChange()" min="0" onkeyup="validarNumero(this)" >
+
+        
+            <label class="lbtexto">Incluir taxa de serviço:</label>    
+            <select class="cbOption" id="cbOption">
+                <option value="Sim" id="cbOpsim">Sim</option>
+                <option value="Não" id="cbOpnao">Não</option>
+            </select>
+
+            <label class="lbtexto" for="qtdInput">Quantidade de pagantes:</label>
+            <!--<button class="btnmenos" onclick="decrement()">-</button>-->
+            <input class="cbQtd" type="number" id="qtdInput" value="1" min="1">
+            <!-- <button class="btnmais" onclick="increment()">+</button>-->
+
+            <button class="btncalcular">Calcular</button>
+
+        </section>
+
+    <!-- Modal -->   
+    <dialog id="dv-modal" class="modal">
+
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('dv-modal')">&times;</span>
+            <div class="modal-header"><!--Cabeçalho dp modal-->
+                <h2 class="modal-header-label" id="titulo-modal">Esse pagamento terá desconto?</h3> 
+            </div>
+            
+            <div class="modal-body"><!--Corpo do Modal-->
+                <p class="corpo_modal" id="txtmodal">Apenas para contas pagas em pix, débito ou dinheiro.</p>
+            </div>
+            
+            <div class="modal-footer"><!--Roda pé do Modal-->
+                <button class="btnsim" id="btSim" onclick="verificarBotao('Sim')">Sim</button>
+                <button class="btnnao" id="btNao" onclick="verificarBotao('Não')">Não</button>
+                <button class="concluir" id="btConcluir" onclick="limparModal('Concluir')">Concluir</button>
+            </div>
+
+        </div>
+    </dialog>
+
+</main>
+</body>
+<script src="./recursos/js/format_reais.js"></script>
+<script src="./recursos/js/Incr_Desc.js"></script>
+<script src="./recursos/js/open_close_modal.js"></script>
+<script src="./recursos/js/calculo.js"></script>
+</html>
